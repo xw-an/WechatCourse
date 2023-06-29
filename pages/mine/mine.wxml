@@ -1,0 +1,28 @@
+<view class="container">
+  <image class="avatar" src="{{userInfo.avatarUrl || '/images/默认头像.png'}}" mode="aspectFill"></image>
+  <view class="nickname">{{userInfo.nickName || '游客身份'}}</view>
+  <button style="width:150px" class="login-btn" bindtap="showLoginModal" wx:if="{{!isLogged}}">点击登录/注册</button>
+  <text class="logout-btn" bindtap="logout" wx:if="{{isLogged}}">退出登录</text>
+
+  <!-- 弹窗 -->
+  <view class="modal" hidden="{{!isShowModal}}" bindtap="handleModalTap" data-modal="background">
+    <view class="modal-content">
+      <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <image class="avatar" src="{{avatarUrl}}"></image>
+      </button> 
+      <input type="nickname" model:value="{{nickName}}" class="weui-input" placeholder="请输入昵称"/>
+      <button style="width:120px" class="btn-login" bindtap="login">登录/注册</button>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{isLogged}}">
+    <view class="card-title">我的收藏</view>
+    <view class="collect-list" wx:if="{{collectList && collectList.length}}">
+      <view class="collect-item" wx:for="{{collectList}}" wx:key="index" data-index="{{index}}" bindtap="gotoDetail">
+        <image class="item-cover" src="{{item.coverUrl}}" mode="aspectFill"></image>
+        <view class="item-title">{{item.title}}</view>
+      </view>
+    </view>
+    <view wx:else class="no-collect">暂无收藏课程，快去<a class="go-home" bindtap="goHome" href="/pages/index/index">首页</a>寻找喜欢的课程吧~</view>
+  </view>
+</view>

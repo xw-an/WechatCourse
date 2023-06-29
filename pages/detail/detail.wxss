@@ -1,0 +1,256 @@
+/* pages/detail/detail.wxss */
+.course-detail {
+  height: 100vh;
+}
+.scroll-view {
+  height: calc(100vh - 100rpx); /* 设置 scroll-view 的高度，留出底部的底栏高度，单位为rpx */
+}
+.swiper-container {
+  height: 700rpx; /* 调整图片轮播的高度，单位为rpx */
+}
+
+.swiper-video, 
+.swiper-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.course-title-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.course-title {
+  flex-grow: 1;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 20px;
+  width: 75%;
+}
+
+.like-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  width: 25%;
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.like-count {
+  padding-top:1px;
+  font-size: 13px;
+}
+
+.course-description {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.time-card {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.time-card-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #666;
+  flex-grow: 1;
+}
+
+.time-card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.time-estimated-date {
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px;
+}
+
+.time-estimated-duration {
+  font-size: 14px;
+  color: #666;
+}
+
+.lecturer-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.lecturer-avatar {
+  width: 75px;
+  height: 70px;
+  border-radius: 50%;
+}
+.lecturer-info {
+  margin-left: 20px;
+}
+.lecturer-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lecturer-department {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.chapter-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.chapter-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.chapter-card-content{
+  font-size: 14px;
+  color: #666;
+}
+.chapter {
+  margin-bottom: 20px;
+}
+.chapter-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.chapter-description {
+  font-size: 14px;
+  color: #666;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110rpx;
+}
+
+.enroll-info {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.enroll-count {
+  font-size: 14px;
+  color: #65c466;
+  margin-right: 5px;
+}
+
+.enroll-label {
+  font-size: 14px;
+  color: #999;
+}
+
+.enroll-button {
+  display: block;
+  /* padding: 10px 10px; */
+  margin-bottom: 10px;
+  background-color: #65c466;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+/* 弹层样式 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  width: 500rpx;
+  height: 500rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  text-align: center;
+  border-radius: 5px;
+}
+.btn-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #7cba59;
+  color: #FFFFFF;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.nickname {
+  margin-top:10px;
+  font-size: 13px;
+  color: #333;
+}

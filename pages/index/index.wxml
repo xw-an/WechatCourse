@@ -1,0 +1,57 @@
+<!-- index.wxml -->
+<!-- 遮罩层 -->
+<view class="mask" wx:if="{{loading}}">
+  <view class="loading-container">
+    <image class="loading-icon" src="/images/加载中.gif" mode="aspectFit"></image>
+    <text class="loading-text">正在努力加载中...</text>
+  </view>
+</view>
+
+<!-- 内容区域 -->
+<view class="container">
+  <view class="header">
+    <input class="search" placeholder="搜索视频" bindinput="onSearchInput" />
+  </view>
+
+  <view class="category-nav" wx:if="{{!keyword || !searchResult}}">
+    <view class="category-item" wx:for="{{categories}}" wx:key="id" data-id="{{item.id}}" bindtap="switchTab" data-category="{{item.name}}">
+      <text class="category-text {{activeTab === item.name ? 'active' : ''}}">{{item.name}}</text>
+    </view>
+  </view>
+    
+  <view class="video-list" wx:if="{{!loading}}">
+    <view wx:if="{{keyword && searchResult.length > 0}}">
+      <!-- 展示搜索结果的视频列表 -->
+      <view wx:for="{{searchResult}}" wx:key="index" bindtap="navigateToVideoDetail" data-video-id="{{item.id}}">
+        <view class="video-card">
+            <image class="video-cover" src="{{item.coverUrl}}"></image>
+            <view class="video-info">
+              <view class="video-title">{{item.title}}</view>
+              <view class="video-description">{{item.description}}</view>
+              <view class="video-stats">
+                <view class="apply-count">{{item.applyCount}}人报名</view>
+                <button class="like-button">{{item.likes}}人收藏</button>
+              </view>
+            </view>
+        </view>
+      </view>
+    </view>  
+    <view wx:else>
+      <view wx:for="{{videoList}}" wx:key="index" bindtap="navigateToVideoDetail" data-video-id="{{item.id}}">
+        <view wx:if="{{item.category === activeTab}}" class="video-card">
+          <image class="video-cover" src="{{item.coverUrl}}"></image>
+          <view class="video-info">
+            <view class="video-title">{{item.title}}</view>
+            <view class="video-description">{{item.description}}</view>
+            <view class="video-stats">
+              <view class="apply-count">{{item.applyCount}}人报名</view>
+              <button class="like-button">{{item.likes}}人收藏</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+

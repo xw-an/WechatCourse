@@ -1,0 +1,72 @@
+<!--pages/detail/detail.wxml-->
+
+<view class="course-detail">
+  <scroll-view class="scroll-view" scroll-y="{{true}}">
+    <swiper class="swiper-container" indicator-dots="{{true}}" autoplay="{{autoplay}}" interval="{{3000}}" duration="{{300}}">
+      <swiper-item wx:if="{{course.video}}">
+        <video id="videoPlayer" class="swiper-video" src="{{course.video.url}}" controls="true" bindplay="onVideoPlay" bindpause="onVideoPause"></video>
+      </swiper-item>
+      <block wx:for="{{course.images}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="swiper-image" mode="aspectFill"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="course-title-container">
+      <view class="course-title">{{course.title}}</view>
+      <!-- 收藏按钮 -->
+      <view class="like-container" wx:if="{{nickName}}">
+        <button class="like-button" bindtap="handleLikeButtonClick">
+          <image class="like-icon" src="{{liked ? '/images/已收藏.png' : '/images/未收藏.png'}}"></image>
+          <text class="like-count">{{course.likes}}</text>
+        </button>
+      </view>
+    </view>
+    <view class="course-description">{{course.description}}</view>
+
+    <view class="time-card">
+      <view class="time-card-title">开课时间</view>
+      <view class="time-card-content">
+        <view class="time-estimated-date">{{course.estimatedDate}}</view>
+        <view class="time-estimated-duration">{{course.estimatedDuration}}分钟</view>
+      </view>
+    </view>
+
+    <view class="lecturer-card">
+      <image class="lecturer-avatar" src="{{course.lecturer.avatar}}"></image>
+      <view class="lecturer-info">
+        <view class="lecturer-name">{{course.lecturer.name}}</view>
+        <view class="lecturer-department">{{course.lecturer.department}}</view>
+      </view> 
+    </view>
+
+    <view class="chapter-card">
+      <view class="chapter-card-title">课程章节介绍</view>
+      <view class="chapter-card-content">
+        <view wx:for="{{course.chapterList}}" wx:key="index" class="chapter">
+          <view class="chapter-title">{{item.title}}</view>
+          <text selectable="true" class="chapter-description">{{item.description}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>  
+  <view class="footer">
+    <view class="enroll-info">
+      <view class="enroll-count">{{course.applyCount}}</view>
+      <view class="enroll-label">人已报名</view>
+    </view>
+    <button class="enroll-button" bindtap="handleSignup">立即报名</button>
+  </view>
+
+  <!-- 弹窗 -->
+  <view class="modal" hidden="{{!isShowModal}}" bindtap="handleModalTap" data-modal="background">
+    <view class="modal-content">
+      <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <image class="avatar" src="{{avatarUrl}}"></image>
+      </button> 
+      <input type="nickname" model:value="{{nickName}}" class="weui-input" placeholder="请输入昵称"/>
+      <button style="width:120px" class="btn-login" bindtap="login">登录/注册</button>
+    </view>
+  </view>
+</view>
