@@ -38,4 +38,8 @@
 - 如果您发现问题或有任何建议，请提交 Issue。
 - 如果您想要贡献代码，请 Fork 本项目并提交 Pull Request。
 
+## 成果展示
+
+https://github.com/xw-an/WechatCourse/assets/9762767/df14fb5b-e99e-48ad-8fe2-e0f054885339
+
 
