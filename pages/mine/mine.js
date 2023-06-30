@@ -96,7 +96,7 @@ Page({
     const avatarUrl= this.data.avatarUrl
     if (nickName) {
       // 从cos中获取所有注册用户数据
-      const cosJsonUrl = 'https://wechatapp-1309811429.cos.ap-shanghai.myqcloud.com/jsonData/loginUser.json';
+      const cosJsonUrl = '自己cos的服务域名地址/jsonData/loginUser.json';
       wx.request({
           url: cosJsonUrl,
           method: 'GET',
@@ -181,7 +181,7 @@ Page({
       const fileName = `${Date.now()}_${Math.floor(Math.random() * 100000)}`;
       const cosFilePath = `/images/userAvatar/${fileName}.png`; // 设置图片的存储路径和文件名，这里假设上传的是 PNG 格式的图片
       wx.uploadFile({
-        url: 'https://wechatapp-1309811429.cos.ap-shanghai.myqcloud.com', // 替换为您的上传接口 URL
+        url: '自己cos的服务域名地址', // 替换为您的上传接口 URL
         filePath: filePath,
         name: 'file',
         formData: {

@@ -123,7 +123,7 @@ Page({
         likeCourses.push({nickName:this.data.nickName,collectList:[this.data.course]})
       }
       //将数据保存到cos的文件中
-      const cosJsonUrl = 'https://wechatapp-1309811429.cos.ap-shanghai.myqcloud.com/jsonData/course.json';
+      const cosJsonUrl = '自己cos的服务域名地址/jsonData/course.json';
       // 先从cos中获取文件内容，然后再将最新内容更更新到cos中
       wx.request({
         url: cosJsonUrl,
@@ -134,7 +134,7 @@ Page({
           jsonData.likeInfo.likeCounts = courseList.map(course=>{return {"id":Number(course.id),"likeCount":course.likes}})
           // 将最新数据jsonData更新到cos中
           wx.request({
-            url: 'https://wechatapp-1309811429.cos.ap-shanghai.myqcloud.com/jsonData/course.json', // 替换为 COS 的 JSON 文件的访问链接
+            url: '自己cos的服务域名地址/jsonData/course.json', // 替换为 COS 的 JSON 文件的访问链接
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json', // 设置请求头中的 Content-Type
@@ -200,7 +200,7 @@ Page({
     const nickName = this.data.nickName
     if (nickName) {
       // 从cos中获取所有注册用户数据
-      const cosJsonUrl = 'https://wechatapp-1309811429.cos.ap-shanghai.myqcloud.com/jsonData/loginUser.json';
+      const cosJsonUrl = '自己cos的服务域名地址/jsonData/loginUser.json';
       wx.request({
           url: cosJsonUrl,
           method: 'GET',
@@ -280,7 +280,7 @@ Page({
       const fileName = `${Date.now()}_${Math.floor(Math.random() * 100000)}`;
       const cosFilePath = `/images/userAvatar/${fileName}.png`; // 设置图片的存储路径和文件名，这里假设上传的是 PNG 格式的图片
       wx.uploadFile({
-        url: 'https://wechatapp-1309811429.cos.ap-shanghai.myqcloud.com', // 替换为您的上传接口 URL
+        url: '自己cos的服务域名地址', // 替换为您的上传接口 URL
         filePath: filePath,
         name: 'file',
         formData: {
@@ -310,7 +310,7 @@ Page({
     let that = this;
     if (nickName) {
       wx.request({
-        url: 'https://wechatapp-1309811429.cos.ap-shanghai.myqcloud.com/jsonData/course.json', 
+        url: '自己cos的服务域名地址/jsonData/course.json', 
         method: 'GET',
         success: (res) => {
           const jsonData = res.data;
@@ -333,7 +333,7 @@ Page({
               appliedCourse.applyCount += 1;
               // 更新 COS 的 JSON 文件
               wx.request({
-                url: 'https://wechatapp-1309811429.cos.ap-shanghai.myqcloud.com/jsonData/course.json', // 替换为 COS 的 JSON 文件的访问链接
+                url: '自己cos的服务域名地址/jsonData/course.json', // 替换为 COS 的 JSON 文件的访问链接
                 method: 'PUT',
                 headers: {
                   'Content-Type': 'application/json', // 设置请求头中的 Content-Type
@@ -385,7 +385,7 @@ Page({
             appliedCourse.applyCount += 1;
             // 更新 COS 的 JSON 文件
             wx.request({
-              url: 'https://wechatapp-1309811429.cos.ap-shanghai.myqcloud.com/jsonData/course.json', // 替换为 COS 的 JSON 文件的访问链接
+              url: '自己cos的服务域名地址/jsonData/course.json', // 替换为 COS 的 JSON 文件的访问链接
               method: 'PUT',
               data: JSON.stringify(jsonData),
               header: {
