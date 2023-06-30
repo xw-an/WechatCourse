@@ -40,6 +40,5 @@
 
 ## 成果展示
 
-https://github.com/xw-an/WechatCourse/assets/9762767/df14fb5b-e99e-48ad-8fe2-e0f054885339
-
+https://github.com/xw-an/WechatCourse/assets/9762767/98f80f44-8e0b-4cf6-bea2-2177b6462291
 
