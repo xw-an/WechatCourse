@@ -39,7 +39,7 @@
 - 如果您想要贡献代码，请 Fork 本项目并提交 Pull Request。
 
 ## cos文件目录
-<img width="946" alt="image" src="https://github.com/xw-an/WechatCourse/assets/9762767/3aaa75fe-0b35-4279-b560-2ac0f46c912b">
+
 - images/目录下放置所需图片
 - jsondata目录下的2个json数据，loginUser.json、course.json用来保存登录信息和报名点赞数
   - course.json的内容：
