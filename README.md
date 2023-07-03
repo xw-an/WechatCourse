@@ -42,7 +42,7 @@
 
 - images/目录下放置所需图片
 - jsondata目录下的2个json数据，loginUser.json、course.json用来保存登录信息和报名点赞数
-  - course.json的内容：
+  - course.json的文件内容：
   {
     "applyInfo": {
         "applyCounts": [
@@ -524,7 +524,7 @@
         ]
     }
 }
-  - loginUser.json的内容：
+  - loginUser.json的文件内容：
   [
       {
           "nickName": "amy",
