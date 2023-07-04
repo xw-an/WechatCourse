@@ -43,6 +43,7 @@
 - images/目录下放置所需图片
 - jsondata目录下的2个json数据，loginUser.json、course.json用来保存登录信息和报名点赞数
   - course.json的文件内容：
+  ```json
   {
     "applyInfo": {
         "applyCounts": [
@@ -522,39 +523,42 @@
                 ]
             }
         ]
-    }
-}
-  - loginUser.json的文件内容：
-  [
-      {
-          "nickName": "amy",
-          "avatarUrl": [
-              "自己cos的服务域名地址/images/userAvatar/1687877068798_33381.png"
-          ]
-      },
-      {
-          "nickName": "xue",
-          "avatarUrl": [
-              "自己cos的服务域名地址/images/userAvatar/1687919134978_21958.png"
-          ]
-      },
-      {
-          "nickName": "123",
-          "avatarUrl": [
-              "自己cos的服务域名地址/images/userAvatar/1688092062511_43012.png"
-          ]
-      },
-      {
-          "nickName": "2233",
-          "avatarUrl": [
-              "自己c'o's/images/userAvatar/1688092305243_77783.png"
-          ]
-      },
-      {
-          "nickName": "232",
-          "avatarUrl": "自己cos的服务域名地址/images/userAvatar/1688094743409_58568.png"
       }
-  ]
+    } 
+  ```
+  - loginUser.json的文件内容：
+  ```json
+  [
+        {
+            "nickName": "amy",
+            "avatarUrl": [
+                "自己cos的服务域名地址/images/userAvatar/1687877068798_33381.png"
+            ]
+        },
+        {
+            "nickName": "xue",
+            "avatarUrl": [
+                "自己cos的服务域名地址/images/userAvatar/1687919134978_21958.png"
+            ]
+        },
+        {
+            "nickName": "123",
+            "avatarUrl": [
+                "自己cos的服务域名地址/images/userAvatar/1688092062511_43012.png"
+            ]
+        },
+        {
+            "nickName": "2233",
+            "avatarUrl": [
+                "自己c'o's/images/userAvatar/1688092305243_77783.png"
+            ]
+        },
+        {
+            "nickName": "232",
+            "avatarUrl": "自己cos的服务域名地址/images/userAvatar/1688094743409_58568.png"
+        }
+    ]
+    ```
 
 ## 成果展示
 <img width="319" alt="image" src="https://github.com/xw-an/WechatCourse/assets/9762767/1dc90fed-862e-47a3-b613-0015f0032962">
