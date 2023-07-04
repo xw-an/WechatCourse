@@ -33,11 +33,6 @@
 - `app.json`：小程序的配置文件
 - `app.wxss`：小程序的全局样式文件
 
-## 参与贡献
-
-- 如果您发现问题或有任何建议，请提交 Issue。
-- 如果您想要贡献代码，请 Fork 本项目并提交 Pull Request。
-
 ## cos文件目录
 
 - images/目录下放置所需图片
@@ -567,3 +562,8 @@
 <img width="321" alt="image" src="https://github.com/xw-an/WechatCourse/assets/9762767/8dc11432-030e-40e2-aa53-0eebd7e36c70">
 
 https://github.com/xw-an/WechatCourse/assets/9762767/63b2cb80-4efe-421e-b780-b0811208a859
+
+## 参与贡献
+
+- 如果您发现问题或有任何建议，请提交 Issue。
+- 如果您想要贡献代码，请 Fork 本项目并提交 Pull Request。
