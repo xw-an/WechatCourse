@@ -85,7 +85,7 @@
         ],
         "applyCourses": [
             {
-                "nickName": "竹逸生",
+                "nickName": "张三",
                 "courseIds": [
                     2,
                     3,
@@ -157,7 +157,7 @@
         ],
         "likeCourses": [
             {
-                "nickName": "竹逸生",
+                "nickName": "张三",
                 "collectList": [
                     {
                         "id": 1,
