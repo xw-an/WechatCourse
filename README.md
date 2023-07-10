@@ -564,6 +564,10 @@
 
 https://github.com/xw-an/WechatCourse/assets/9762767/63b2cb80-4efe-421e-b780-b0811208a859
 
+## 小程序入口
+<img width="390" alt="image" src="https://github.com/xw-an/WechatCourse/assets/9762767/cfc3ee38-3336-48cd-86b8-4be77882451a">
+
+
 ## 参与贡献
 
 - 如果您发现问题或有任何建议，请提交 Issue。
